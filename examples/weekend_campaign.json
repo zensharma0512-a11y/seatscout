@@ -1,0 +1,39 @@
+{
+  "now": "2026-11-18T10:00:00+05:30",
+  "campaign": {
+    "name": "weekend-picks",
+    "limit": 3,
+    "tiers": [
+      {"name": "cheap_local_weekend", "rule": {"all": [{"nearby": 25}, {"this_weekend": true}, {"price_under": "50"}]}},
+      {"name": "local_weekend", "rule": {"all": [{"nearby": 25}, {"this_weekend": true}]}},
+      {"name": "your_interests", "rule": {"matches_interests": true}}
+    ],
+    "fallback": {"starts_within_hours": 336}
+  },
+  "customers": [
+    {"id": "asha", "timezone": "Asia/Kolkata", "interests": ["music"],
+     "home": {"name": "Jaipur", "lat": 26.9124, "lon": 75.7873}},
+    {"id": "dev", "timezone": "Asia/Kolkata", "interests": ["food"],
+     "home": {"name": "Delhi", "lat": 28.6139, "lon": 77.2090},
+     "shared_location": {"name": "Goa", "lat": 15.4909, "lon": 73.8278}},
+    {"id": "meera", "timezone": "Asia/Kolkata", "interests": ["opera"],
+     "home": {"name": "Delhi", "lat": 28.6139, "lon": 77.2090}}
+  ],
+  "events": [
+    {"id": "jaipur-jazz-night", "name": "Jazz Night at Albert Hall", "category": "music",
+     "venue": {"name": "Jaipur", "lat": 26.9124, "lon": 75.7873},
+     "starts_at": "2026-11-21T19:00:00+05:30", "price": "30", "tickets_left": 120},
+    {"id": "jaipur-standup", "name": "Sunday Standup", "category": "comedy",
+     "venue": {"name": "Jaipur", "lat": 26.9200, "lon": 75.8000},
+     "starts_at": "2026-11-22T21:30:00+05:30", "price": "65", "tickets_left": 40},
+    {"id": "jaipur-sold-out", "name": "Rooftop Session", "category": "music",
+     "venue": {"name": "Jaipur", "lat": 26.9124, "lon": 75.7873},
+     "starts_at": "2026-11-21T20:00:00+05:30", "price": "10", "tickets_left": 0},
+    {"id": "goa-beach-fest", "name": "Beach Fest", "category": "music",
+     "venue": {"name": "Goa", "lat": 15.5000, "lon": 73.8300},
+     "starts_at": "2026-11-21T17:00:00+05:30", "price": "45", "tickets_left": 500},
+    {"id": "delhi-food-fair", "name": "Winter Food Fair", "category": "food",
+     "venue": {"name": "Delhi", "lat": 28.6139, "lon": 77.2090},
+     "starts_at": "2026-11-25T12:00:00+05:30", "price": null, "tickets_left": 1000}
+  ]
+}
